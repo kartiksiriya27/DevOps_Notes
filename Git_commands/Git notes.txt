@@ -40,9 +40,15 @@ I. GIT COMMAND'S
 	•	git -stash                           - for pausing the work on current repository 
 	•	git stash pop                        - For resuming the pause work 
    	•	git stash list                       - How many task are on hold
-	•	git -log                             - We can check the commits when occur Author name date and time and initial changes we can see with this command
+	•	git -log                             - We can check the commits when occur Author name date and time and initial changes we can see 
 
-
+        •       git commit --amend -m "new message"  - It is used for modifieng the commit message which is not pushed it into a remote repo or git repo 
+        •	git diff commitid1 commitid2         - With the help diff we can differentiate the two commit 
+        •	git revert commitid                  - It is like undo like switching it into previous thing (only useful for the initial commit)
+        •	git revert commitid4 commitid1       - It is like reverting the changes from 4id to 1id
+        •	git merge branch                     - We can merge the self created branch with default branch 
+        •	git shortlog                         - It only refclect the commit message which we have given
+         
 
 With the help of log
 
