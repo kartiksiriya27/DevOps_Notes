@@ -1,0 +1,115 @@
+Introduction to "DevOps" :  
+                                                       
+SDLC  [ Software Development Life Cycle ] : It is a process to build packages, software and application.
+
+SDLC have two models : 1.waterfall model 2.agile model
+
+1.waterfall model : The waterfall model is a traditional and linear software development methodology often used in project management.
+
+                                     Requirement/gathering/analysis
+                                                  |
+                                       Design/planning/architect
+                                                  |
+                                    Implementation/coding/development
+                                                  |
+                                                 Test
+                                                  |
+                                      Release/delivery/deployment
+                                                  |
+                                   Maintenance/monitoring/feedback
+
+Limitations : * It is not suitable for complex projects, Where changes are in high frequency.
+              * Time consuming, until unless we complete the current stage, we cannot go for next stage. At the same time we cannot go back.
+              * In order to these issues or limitations we have next model is Agile methodology
+
+2.Agile methodology :     *Project is decided into iterations.                                             
+                          
+                          *All iterations have specific time.                               Sprints (2-8 weeks)            
+
+                          *End to touch iterations "MVP"((minimum viable product).
+
+Limitations : *Miscommunication
+              *Whenever the configuration changes the operation team not able to deploy the application.
+           
+              Dev Team           |       Ops Team
+                                 |   
+             Wants changes       |      Wants changes          
+
+In Order to overcome agile methodology which we use DevOps which development & operations.
+
+Development without DevOps culture : *Release and deploy mismatch.
+                                     *Unpredictable issues.
+                                     *Blame games.
+
+Development with DevOps culture : *Stream line deliveries.
+                                  *Team work in collaboration.
+                                  *Blame games.
+
+
+    Dev Team : *plan
+               *Code 
+               *Build
+               *Test
+               
+
+   Ops Team : *Release
+              *Deploy
+              *Operations
+              *Monitor
+
+
+
+What DevOps is not :- *DevOps is not a role, Person or organisation.
+                      *DevOps is not a separate team.
+                      *DevOps is not a product or tool.
+                      *DevOps is not about just writing the scripts or implementing the tools.
+
+What is DevOps :- *DevOps is a practice that allows a single team to manage entire development life cycle.
+                   That is development, Testing, Deployment and monitoring.
+                   
+                        [ code - Production ]
+
+What does DevOps do :- *Integrates development and operations team.
+                       *Improves collaboration & productivity by automating.
+                       *The infrastructure automating the work flows continuously measuring application performances.
+
+Skills of a DevOps engineer :- 
+                 1.Tools :- *Version control system (Git)
+                            *Continuous integration (Jenkins)
+                            *Containerisation (docker)
+                            *Configuration management (Ansible)
+                            *Monitoring (Prometheus, Grafana)
+
+Networking skills :- General networking skills establishing the connection between containers or container orchestration.
+
+Other skills :- People skill, process skill, customer skill.
+
+                                       
+                                         "DevOps life cycle"
+
+1.Plan :- First stage of DevOps cycle they where you can plan, Tracks visualize and summarize your project
+          before working of starting it.
+Examples: *Jira *Trello
+
+2.code :- Second stage of DevOps cycle where the developers write their code.
+Examples: *Git *GitHub *Bit bucket
+
+3.Build :-Build pre release version and is defined by build number, Rather than by release number.
+Examples: *Apache, *Maven
+
+4.Test :-Process of executing automated test as a part of the software delivery pipeline in order to obtain feedback on the business 
+         risks associated with a software release as rapidly as a possible.
+Examples:*Junit *selenium *JMeter
+
+5.Release :- This phase helps to integrate code into a shade repository using which you can detect and locate errors quickly and easily.
+Examples: *Bamboo *Gitlab * Jenkins 
+
+6.Deploy :- Manage and maintain development and deployment of software systems and servers in any computational environment.
+Example: *Aws *chef *Ansible   
+
+7.Operattions :- These phase is to keep the system upgraded with the latest update.
+Example: *Aws *Ansible *Chef
+
+8.Monitoring :- It ensures that application is performing as desire  and the environment is stable then it quickly determines 
+                when a service is unavailable and understanding the underlaying causes.
+Example: *Prometheus *Grafana *Splunk

@@ -1,0 +1,104 @@
+                              GIT NOTES
+
+
+I. How to rename the default branch name into a Git Hub repository
+	•	Go to git hub setting 
+                then click on Default branch 
+                and then we have a option to edit a default name with our convenience
+II. How to delete the repository 
+	•	Go to git hub setting
+                go to danger zone
+                and we get the option to delete the repository
+III. How to invite a new user to a git hub repository 
+	•	Go to general setting
+	•	Click on collaborator
+	•	select the repository in which you have to invite the user
+	•	Then it will ask you for Gmail id or git hub username 
+$ git push origin --delete kartik this is how you can invite the new user into a repository
+
+
+ 
+ 
+I. GIT COMMAND'S
+
+	•	git clone <repo link>                - It is use for cloning the remote repository into a local machine
+	•	git touch <file name>                - It is use for creating a empty file
+	•	git cat > <file name>                - It is use for creating a new file with some additional data
+	•	git cat >> <file name>               - It is use for add the data into a existing file
+	•	git pwd                              - Present working directory, in which directory we are working
+	•	git add <file name>                  - Adding the file from working directory to staging directory
+	•	git status                           - show the status of the Files/Directory weather it is tracked or untracked
+	•	git commit -m "message"              - what are the changes or updates done by the user 
+	•	git push -u origin master            - pushing the files/directory from local machine to remote repository
+	•	git branch                           - It shows how many branch which is present into a repository  
+	•	git branch name                      - Creating a new branch in remote repository
+	•	git branch -d name                   - Deleting a branch in our local machine but it will reflect into a remote repository
+	•       git push origin --delete branch name - Delete a branch from a remote repository but it will reflect in a local machine
+	•	git switch branch name               - Shifting from one branch to another branch
+	•	git checkout branch name             - Checkout from the present branch and shift it into a another branch with branch name
+	•	git push --set-upstream origin name  -
+	•	git -stash                           - for pausing the work on current repository 
+	•	git stash pop                        - For resuming the pause work 
+   	•	git stash list                       - How many task are on hold
+	•	git -log                             - We can check the commits when occur Author name date and time and initial changes we can see with this command
+
+
+
+With the help of log
+
+	•	git log
+	•	Commit ID
+	•	Author
+	•	Date/Time
+	•	Timestamp
+	•	Initial change
+
+When you perform commit command for the first time:
+
+	•	git config –-global email “id”
+	•	git config -–global user.name “name”
+
+When we are performing git commit for the first time then the system will ask you who are you then you have to share the details which is required
+
+Credential Manager
+
+	•	If we are logging in with different git user ID then we have to go and change the credentials from credential manager.
+	
+Command to add branch
+	•	git branch 
+
+List the branch
+	•	git branch
+
+Switch to branch
+	•	git switch 
+
+If we want to check out from branch and shift into main branch
+	•	git checkout 
+
+If there is not a new branch in remote repo, which is created by us from that we use
+	•	git push –-set-upstream origin 
+
+The current branch has no upstream branch. To push the current branch and set the remote by upstream, we use:
+	•	git push -–set-upstream origin 
+
+PR means created branch with a main branch to save the data in the created branch to main branch.
+
+WIP - Work in Progress
+
+git branch -d 
+	•	(For deleting branch)
+
+First, we have to come out from that branch and switch to the main branch. Then only we can delete the branch which is created by us.
+
+The Command: git stash
+	•	With the help of git stash, we can pause or save the data which we have created in the local machine.
+
+For resuming the stash:
+	•	git stash pop
+
+git stash list
+	•	Shows how many tasks are on pause mode.
+
+
+	

@@ -1,0 +1,75 @@
+
+
+I. How to push the folder from local to remote
+	•	Create a new folder in local machine.
+	•	Then add the new folder in a remote repo with:
+git add folder_name
+	•	Then check status:
+git status
+	•	Commit:
+git commit -m "message"
+	•	Push:
+git push
+
+II. Restore
+
+Restore a file from staging area to working area
+
+Restore specified path in the working tree using contents from a restore source.
+If a path is tracked but does not exist in the restore source, it will be removed to match the source.
+
+git restore --staged filename
+
+
+
+III. Git Revert (to some existing commit)
+
+Reverting the some existing or the most latest commit.
+
+We can revert any commit with the help of commit ID, which we can see by git log command.
+
+git revert undoes one or more existing commits. It reverts the changes that the related patches introduced and records some new commits that reverse them.
+This requires your working tree to be clean (no modifications from the HEAD commit).
+
+git revert commit_id
+
+IV. Fork (only in user interface, not in bash)
+
+Fork is a copy of a repository.
+Forking a repository allows you to freely experiment with changes without affecting the original project.
+
+Exception: Only public.
+
+If we want the only main branch, click on that checkbox.
+When we want all branches, don’t click onto it.
+
+V. Merge
+
+Join two or more development histories together.
+
+Incorporate changes from the named commit into the current branch.
+This command is used by Git pull to incorporate changes from another repository and can be used by hand to merge changes from one branch to another.
+
+git merge branch_name
+
+Pull Request (PR)
+
+When merging pull requests, you can allow any combination of merge commits, squashing, or rebasing. At least one option must be enabled. You have linear history requirements, enable rebase on any protected branch, or you must enable squashing or rebasing.
+
+Squash
+
+Combine all commits from the head.
+
+git commit -am "message"  (only used for existing file)
+
+Project 
+
+Master/Main
+
+Dev 
+
+Release branch -2.0 (Adding new payment adding service)
+
+Features-payment -- developer team -java team 
+
+Features-db service -- Data base team

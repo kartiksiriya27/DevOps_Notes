@@ -1,0 +1,79 @@
+                                                                  GIT
+
+
+ 
+                                                                VSM/SCM
+                                           Version Control System   Source control Management  
+ LVCS-Local version control system
+ CVCS-Centralized version control system 
+ DVCS-Distribute version control system
+
+ 1] Why we are using version control system
+   - For collaboration, storing version, figuring out what going and backup for that we are using version control system   
+  
+Issue - one saved all the changes made in the file are permanent and cannot be revert back 
+No record of what was done and by whom
+Downtime that can occur because of a faulty could cost millions in loss
+
+2] what is version control
+   -A change which is mad to a file or a set of file it allows multiple user to manage multiple version of the same unit information it is a snapshots of you project over time 
+
+
+
+I. LVC
+	•	The practice of having the version database in the local computer.
+	•	Local database keeps a record of the change made to files in the version database.
+
+Issue: Multiple people parallelly working on the same project.
+Solution: Centralized Version Control System.
+
+II. CVCS
+	•	Local version control issues are resolved by CVCS.
+	•	In CVCS, a central repository is maintained where all the versioned files are kept.
+	•	Now, users can check out and check in files from their different computers at any time.
+
+Issue: In case of central server failure, the whole system goes down.
+Solution: Distributed VCS.
+
+Let me know if you’d like further assistance!
+
+
+
+III. Distributed Version Control
+	•	Version database is stored at every user on the local system and at the remote server.
+	•	Users manipulate the local files and then upload the changes to the remote server.
+	•	If any of the servers die, a client server can be used to restore all the things.
+
+What is Git
+	•	Git is an open-source DVCS (Distributed Version Control System) which records changes made to the files, laying emphasis on speed, data integrity, and distributed, non-linear workflows.
+
+Git Commands for checking a version:
+	•	$ git --version
+	•	$ git --help
+
+Here is the converted text from the image:
+
+Git Workflow
+
+[Diagram]
+Remote Repository
+⬇ (Clone) ⬇
+Working Copy ⟷ Staging Area ⟷ Local Repo
+(Pull/Fetch)           (Index)             (Push)
+⬆
+(Commit Changes)
+
+	•	Local Repo: Is a user’s copy of the version database.
+	•	The user accesses all the files through the local repo and then pushes it into a remote repo after changing it.
+	•	Working Space: Is the user’s active directory.
+	•	The user modifies existing files and creates new files in the space. Git tracks these changes compared to your local repo.
+	•	stage is a place where all the modified file maked to be commited are placed 
+	•	clone command create a copy of an existing remote repo inside the local repo
+	•	Push coommand pushes all the change which is occurred in local repo
+	•	Fetch command collect the changes which is done in local repo
+	•	when we clone the repo from first time empty repo will be having the two object one is .git and another one is Read.Md
+
+
+
+
+ 
