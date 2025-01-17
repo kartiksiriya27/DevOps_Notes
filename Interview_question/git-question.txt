@@ -1,0 +1,7 @@
+1]   Do you Know about Amend ?
+    -Amend is for modifieng the existing commit message without changing any file and folder
+    -exeception - we can only Amend the commit message before pushing it into a remote or Git hub repo
+    -command git commit --amend-m "message"
+
+2]   How to change the message of a existing commit ? (senario based question)
+    -while using a Amend command
