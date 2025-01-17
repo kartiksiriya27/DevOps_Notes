@@ -1,0 +1,31 @@
+17/01/25
+
+Git Basic - Tagging 
+
+ • Tagging 
+
+ • Like most VCSS git has the ability to tag specific point in a repository history as being important typically people use this functionality to mark  release point point 
+   (v1.0|v2.0|and soon) to section .you will learn how to list existing tags are 
+ • You don't need to remember the entire commit id of the commit 
+ • you can use commit tag as aliases and keep the track of different commits
+
+Git Tag
+ • v1.0
+ • v2.0
+
+Syntax for tag is
+
+ • git tag -a "annotation" -m "message"
+ • git push --tag (for pushing it into a remote repository)
+
+
+Git cherry pick 
+ 
+ • It is used to copy a file from one branch to another file 
+ • If we mistakenly create a file in default branch but we want that file in different branch with the help of got cherry pick we can do that
+
+ • git cherry pick in git means choosing a commit from one branch and applying it to another branch 
+
+Syntax for cherry pick
+
+• git cherry -pick commit id 
