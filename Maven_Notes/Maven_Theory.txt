@@ -1,0 +1,148 @@
+1] What is Maven ?
+
+	•	Maven is a tool that is used to compile, validates codes, and analyse the test-case in the code.
+
+	•	Manages the building, repositories and documentation from source control management (scm)
+
+	•	Maven projects are configured through project object model (pom)
+
+	•	Pom.xml file contains documentation for all of the object, properties, method and events 
+
+
+2] What Maven is capable of ?
+
+	•	Information of project is centralized through maven 
+
+	•	Our software project is modeled by it 
+
+	•	Build process is managed 
+
+	•	Data about the software project is gathered and the build itself 
+
+	•	Document the software, and our project 
+
+	•	Deployable artifact can be generate from source code 
+
+	•	your source code is compiled, paced test and distributed '
+
+	•	Repo it create website is generate for the project 
+
+
+3] maven Build Lifecycle 
+
+	•	In Maven the build is run using a predefined and ordered set of steps to call the build lifecycle 
+
+	•	The build tasks that will be performed during each phase and determined by the configuration in the project file and in particular the selected packaging 
+
+	•	Maven relies  on build life-cycle to define the process of building and distributing artifacts (eg jar file, war file) 
+
+4] There are three types of build in build life-cycle 
+
+	•	Default -Handles project and deployment 
+
+	•	Clean - Handles project cleaning 
+
+	•	Site - handles project site generation 
+
+
+5] Maven Architecture
+
+Plug-in (1), Plug-in (2), Plug-in (3), Plug-in (n)
+                  (Core Engine)
+
+[Remote Repositories]             [Local Repositories] 
+ Organization Level                 Local Machine or Windows 
+		            
+		        
+
+6] Maven Artifacts
+	•	An artifact is a file resulting from packaging a project.
+	•	Can be a .jar, .war, .ear, or XML file, for example.
+	•	Artifacts are developed in repositories, so they can be used as dependencies by other projects.
+	•	Artifacts are identified by three components:
+
+	I.	Group ID:
+	•	A unique identifier for a group of related artifacts, usually named like Java packages (e.g., pt.jpeereira.mobile).
+	II.	Artifact ID:
+	•	A unique identifier within the context of a group ID that identifies the artifact/project (e.g., puzzle).
+	III.	Version:
+	•	Also called artifact coordinates.
+
+
+7] Maven Repository Flow  
+      
+      Remote 
+      Repo                     
+                        step2
+
+      step3                          Developer 
+
+                         
+      Local             step1
+      Repo              step4
+
+
+Step 1 
+	•	when developer executes command mvn it will go and checked in local repo if founds the dependency or plugin in local repo then developer can see the output 
+
+Step 2
+	•	If not found in local repo from developer machines it will go and search in remote repo 
+
+Step 3
+	•	From remote repo required dependency and plugin will get stored in local repo
+
+Step 4 
+	•	From local repo developer will get the output 
+
+
+8] Project Object Model 
+	•	POM for short 
+	•	XML file located at the root of the project (POM.XML)
+	•	It includes configuration for your project including 
+
+	-       Information about the project
+	-       Configuration details to build the project
+	-       Contains default values for most of the project e.g source, dir, targe.dir 
+	-       Configuration about plugins and goals 
+	-       used repositories 
+
+9] Declaring Dependency 
+
+                Why declaring the dependency, coordinates of the artifacts must be provided.
+
+	•	Group Id : A unique identification for the group of related artifacts 
+	•	Artifacts ID : An Artifacts is a file which is made after packing a project and artifacts ID is a unique identifier within the context of group ID and it identifies  
+  	•	Version : It is an identifier for the release or build number of project 
+
+10] Maven installation
+
+           Pre Requisite
+	•	A system running window
+	•	A working internet connection 
+	•	Access to an account with administration privileges
+
+Access to command prompt 
+A copy of java installed and ready to use with the JAVA_HOME environment variable setup 
+
+Step 1 : Download Maven zip file and extract folder structure of maven  bin, boot, count, lib 
+Step 2 : Add MAVEN_HOME system variable 
+Step 3 : Add MAVEN_HOME directory in path variable 
+
+How to install java 
+
+          First go to the browser and search Download java 
+	• Select windows and select 64 Installer click on the link 
+	• so after clicking on the link the java jdk will be download it into your local machine 
+          it will download into a c drive in local machine 
+          open the c drive go to program file then go to java and then click on jdk and select and copy the path 
+          After selecting the path go to edit the system environment variables then click on ev select new gave variable name as JAVA_HOME and that path which you have copied from the jdk
+          Select Path in variable path then click on edit then click on new paste the jdk path here also 
+          ckeck on command prompt search java -version then it will show you what version you have download 
+  
+
+
+
+
+
+
+
