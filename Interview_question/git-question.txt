@@ -5,3 +5,12 @@
 
 2]   How to change the message of a existing commit ? (senario based question)
     -while using a Amend command
+
+3]   what is the purpose of the git cherry pick comand ? 
+    -It use to copy a file from one branch to another branch 
+
+4]   How will you copy a file from one branch to another ? (senario based question)
+    -With the help of git cherry pick 
+
+5]   what is the purpose of git tag command ?
+    -with the help to tag command we can give a tag to a perticular tag to a commit id with some special name 

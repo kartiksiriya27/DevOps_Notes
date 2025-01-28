@@ -36,7 +36,7 @@ I. GIT COMMAND'S
 	•       git push origin --delete branch name - Delete a branch from a remote repository but it will reflect in a local machine
 	•	git switch branch name               - Shifting from one branch to another branch
 	•	git checkout branch name             - Checkout from the present branch and shift it into a another branch with branch name
-	•	git push --set-upstream origin name  -
+	•	git push --set-upstream origin name  - we can push the newly created branch in local to origin or GitHub
 	•	git -stash                           - for pausing the work on current repository 
 	•	git stash pop                        - For resuming the pause work 
    	•	git stash list                       - How many task are on hold
@@ -48,7 +48,8 @@ I. GIT COMMAND'S
         •	git revert commitid4 commitid1       - It is like reverting the changes from 4id to 1id
         •	git merge branch                     - We can merge the self created branch with default branch 
         •	git shortlog                         - It only refclect the commit message which we have given
-         
+        •       git tag -a "annotation" -m "msg"     - It used to give a tag to a perticular commit 
+        •       git cherry -pick commit id           - Copying 1 file from default branch to created branch 
 
 With the help of log
 

@@ -9,7 +9,7 @@ Feature-payment: Developer team Java team
 
 Feature-observe: Data base team  
 
-git commit -amend "New."  
+git commit --amend -m "New."  
 is for modifying the existing commit message without changing any files and folder  
 
 Interview Question:  
@@ -18,7 +18,7 @@ Do you know about the amend
 or else Scenario Question: Like  
 How to change the message of an existing commit or previous commit  
 
-git commit --amend "message"
+git commit --amend -m "message"
 
 Branching clear strategies  
 
