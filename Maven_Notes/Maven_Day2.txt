@@ -6,7 +6,9 @@ Maven Through Terminal
 
 COMMANDS 
 
-	• mvn -version 
+	• mvn -version
+                                                                      Example
+                                                                        |
 	• mvn archetype:generate -DgroupId=com.example -DartifactId=helloworld -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
 	• mvn validate
 	• mvn compile 
