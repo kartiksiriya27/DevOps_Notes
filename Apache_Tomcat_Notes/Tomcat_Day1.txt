@@ -1,0 +1,43 @@
+Once we generate the artifacts we need server to run the application so Apache Tomcat is a open source server that host only java based web application 
+	  Apache tomcat 
+
+How to install Tomcat Apache server on windows machine ?
+	• Apache Tomcat is an open source server and servlet container for java code 
+
+Prerequisites: 
+	• Java JRE installed and configured 
+	• Administrator privileges 
+
+How to install Tomcat on windows
+  Step 1 - 
+	• Download tomcat for windows, browse to official Apache Tomcat website located the download section then click on download and download latest version of the software 
+	
+  Step 2 -
+	• Install Tomcat via the windows service installer for an automated and wizard-guide experience 
+	• After downloading the 32bit/64bit windows zip file depending on your windows on your windows version unzip the downloaded file right click the file and select extract all
+	• Navigate to the unzip file of the Apache file only
+
+Default port number of Apache Tomcat is 8080 if at all we want to change the default port no we will go to apache Tomcat folder -->conf-->server.xml
+
+<connector port ="8080" protocol ="HTTP/1.1" 
+              connection timeout ="20000"
+                   redirect port ="8443"/>
+
+Change the connector port number to any number between 1024 and 65535
+
+How to start and stop Apache Tomcat server ?
+          Apache Tomcat -->bin-->shutdown (windows batch file)
+
+	• To stop or shutdown 
+          Apache Tomcat -->bin-->shutdown (windows batch file)
+
+	• For configuration changes
+          Apache Tomcat -->conf 
+
+	• For Hosting of the application (Artifacts/Deployable packages)
+          Apache Tomcat -->webapps
+
+	• For logs 
+          Apache Tomcat -->logs (Apache Tomcat and also application which is running inside Tomcat)
+
+We can access the Apache Tomcat using localhost:8080 or 127.0.0.1:8080
