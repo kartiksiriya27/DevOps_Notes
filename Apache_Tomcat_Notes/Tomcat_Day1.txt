@@ -41,3 +41,7 @@ How to start and stop Apache Tomcat server ?
           Apache Tomcat -->logs (Apache Tomcat and also application which is running inside Tomcat)
 
 We can access the Apache Tomcat using localhost:8080 or 127.0.0.1:8080
+
+Updated download method 
+
+Go to Binary Distribution and then go to core select 3rd link windows zip (pgp,sha512)
