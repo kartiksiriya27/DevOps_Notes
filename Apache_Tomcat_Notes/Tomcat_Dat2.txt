@@ -1,0 +1,64 @@
+Folder Structure of Apache Tomcat Server 
+
+	• Conf {configuration} 
+	• logs 
+	• Webapps 	
+	• work 
+	• bin 
+	• lib 
+	• temp
+
+
+How to access the application ?
+	• URL (127.0.0.1:8080 or localhost:8080/AJA)
+
+          Where "AJA" is a artifacts name 
+
+
+mvn archetype:generate -DgroupId=com.example.aja -DartifactId=aja -DarchetypeartifactsId=maven-archetype-webapp -Dinteractivemode=false
+
+
+How we can place the artifacts from the maven project of target folder to apache tomcat webapps folder
+
+ 	• cp <pathwhereartifact> <pathwherewebappssoftomcat>
+	• cp <source> <destination>
+With the help of this command we can copy the folder 
+
+<destination> cp/<source>
+
+If we do any of the configuration changes we need to restore the server 
+
+Default to some other port 
+
+Tomcat ->bin->shutdown with previous "8080" server->startup server port number (enter 8888)
+
+If we do any config changes we need to restart the server
+
+To change the port no of apache Tomcat we need to stop the server 
+
+Then change the default port number 
+
+	• Zip and Tar file comes in server 
+	• exe files comes in service 
+
+There is one more way to shutdown the server is close the cmd prompt terminal or with the help of ctal c
+
+To deploy the application the another way is with Tomcat GUI
+This is the place we deploy the war file 
+
+Access the URL of the Tomcat and search for war file to deploy then click on choose file then it will open dialogue box in that box you need to select artifacts then click on open then click on Deploy button 
+
+How can we access the Apache Tomcat GUI
+
+First we need to go to Apache Tomcat folder then go to config then 
+Modify "tomcat -user.xml" (using text editor example vi ) 
+vi tomcat -user.xml
+
+
+Then search for below line 
+<user username = "admin"
+Need to remove the comment from those line with the help of below symbol 
+<!--
+-->
+
+Once you finished your modification then we need to save and quit 
