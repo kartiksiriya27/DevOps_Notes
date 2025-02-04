@@ -1,0 +1,186 @@
+I  Configuration Changes 
+
+   •Things to keep in mind before changing configuration changes 
+
+
+1]Where to change 
+
+2]Backup 
+
+3]How to change 
+
+4]Try or experiment on your local Environment system
+
+5] Documentation 
+
+II Snapshot/Backup 
+
+For wildfly - Configuration snapshot 
+
+-->Home folder of wildfly --> standalone -->configuration -->standalone_xml_history 
+
+File name : Standalone .v1
+•Port number change 
+Eg:Standalone.v2 
+
+
+Need to rename the original or existed file and then replace the customized as per requirements change
+
+III Different Status types of the artifacts deployed in wildfly
+
+ • In wildfly deployed artifacts can have various status states including
+
+deployed : The application is successfully running on the wildfly server and accessible to user 
+undeployed : The application has been remove from the server and is not currently running  
+Failed : The deployment process encountered and error the application is not running 
+Disabled : The application is intentionally stopped by the administration and cannot be across until enable 
+Suspended : The application is temporarily paused and kcan be resumed later 
+Redeploying : The application is currently being update with new code and  is not fully available while the redeployment process is ongoing 
+
+Accessing deployment status 
+
+Wildfly Management console 
+
+•you can view the status of deploy artifacts through the wildfly admin console which provides a list of deployments with their current state 
+
+•CLI (command line Interface) 
+using the wildfly command-line interface you can query the status of deployments with management commands 
+
+•Indicating weather the application is currently running not deploy,encounter an error during deployment internally deactivated, temporary paused or is in the process of being re-deployed with updates 
+
+
+•In Jsboss Wildfly "domain control" is the central management point for a group of server within a domain responsible for maintaining the overall configuration and policy while a "host control" is a seprate process running on each server .with in the domain, computing with the domain controller to manage the individual server instances an that host machine essential the domain controller dictates the overall configuration and the host controller execute those configuration on their respective servers .
+
+
+IV] Key Points about domain host controller 
+
+    • Domain Controller 
+
+i]   Acts as the central management point for the entire domain 
+ii]  Stores the domain-wide configuration in a file called "domain.xml"
+     Home folder -->domain -->config -->domain.xml
+iii] Responsible for distributing configuration changes to all host controller within the domain 
+
+
+   • Host Controller 
+
+i]   Manages the application server instance running on a specific host 
+ii]  reads its configuration a "host.xml" file specific to that host 
+Home folder -->  domain --> config --> host.xml
+iii] Communicating with the domain controller to receive configuration updates and start/stop server instance 
+
+
+Domain is representing to centralized or master where we can manage other wildfly server (host) DC and HC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+  
