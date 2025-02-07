@@ -91,7 +91,7 @@ use the following URL to trigger build remotely
 3] Build periodically 
    (If Schedule)
 
-       • This filed follows the syntax of corn (with minor difference) specially, each line consist of 5 field separated by TAB whitespace
+       • This field follows the syntax of cron (with minor difference) Specially, each line consist of 5 field separated by TAB whitespace
 
        • MINUTE HOUR DOM MONTH DOW
 
