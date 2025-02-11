@@ -1,0 +1,110 @@
+How to change the default port no of Jenkins ?
+
+• Go to to the path c:\program files\Jenkins
+• In that folder find the Jenkins.xml file 
+
+Search for "--httpPort=8080" in Jenkins.xml file where 8080 default port no 
+
+• In order to change this default port no we should replace 8080 by own choice port no 
+
+• then save it once finishing your modification Jenkins.xml file restart the server 
+
+•  Note: Before changing the any Jenkins configuration or port no better take backup of original file for safer site 
+
+
+What if Jenkins administration forget the password 
+
+• Go to the Jenkins home directory c:\program data\Jenkins\.Jenkins in that path open the configuration.xml file search for <userSecurity>true<useSecurity>
+Replace true with false <useSecurity>false<useSecurity> 
+then save it in the browser with the Jenkins URL where you will not see any login datail and user detail In Jenkins GUI and go for manage Jenkins 
+
+•First we will go to security under security realm (when we configured.xml file from true to false it will be nun)
+
+•First here we need to change security realm to Jenkins owns database 
+
+•Go under authorization when we change config.xml file from true to false authorization will change to any one can do any thing here we need to change any one can do any thing to either matrix or project base 
+
+• Once you select change the strategy under that uncheck the anonymous 
+
+• Click on add user button add the admin user and give the role us administrator
+
+• Save it
+
+• We need to go for manage Jenkins user go for admin user change the password then save the Jenkins server 
+
+• Now we should restore the Jenkins server 
+
+• Note: Better take backup of config of config.xm file 
+
+After restarting, check with the `Admin` user whether login with password and admin privileges works.
+• Go back to `config.xml` and modify:
+   
+   <useSecurity>false</useSecurity>
+   
+   - Change `false` back to `true`.
+• Restart the Jenkins server.
+
+
+
+Using Jenkins Environment Variables:
+
+• Jenkins pipeline exposes environment variables via the global variable `env`, which is available from anywhere 
+within a `Jenkinsfile`.
+• Reference: `jenkins.io/doc/book/pipeline/jenkinsfile/#using-environment-variables`
+
+Common Jenkins Environment Variables:
+• BUILD_ID - The current build ID, identical to **BUILD_NUMBER** for builds created.
+ Build Variables in Jenkins
+• BUILD_NUMBER
+• BUILD_TAG
+• BUILD_URL
+• JENKINS_URL
+• JOB_NAME
+• NODE_NAME
+• WORKSPACE
+
+
+   Example Usage:
+• Use the Jenkins Pipeline (Declarative Pipeline).
+• In the Jenkins URL, we can see example code or copy the code when creating a new item in Jenkins for a pipeline job.
+• Replace the script with copied code and save it.
+• Build the job.
+• Expected Output: Should be running on `http://localhost:8080`.
+• If the port number is changed from `8080` to another port, but Jenkins still shows `8080`, investigate 
+why it is retaining the default port.
+
+
+
+ How to Parameterize a Jenkins Job
+• **Parameters** allow you to prompt users for inputs that will be passed into a build.
+• To create a new job:
+  1. In the general configuration of the job, check the option **"This project is parameterized".
+  2. Click on the "Add Parameter" dropdown.
+  3. Various parameters available:
+      Boolean
+     • Choice
+     • Credentials
+     • File
+     • Multi-line string
+     • Password
+     • Run
+     • String
+
+
+  4. Example:
+     • Click on Choice Parameter.
+     • Define a simple parameter that can be selected from a list during a build.
+     • Name it `Env` and provide multiple environment names as choices.
+     • Add a Description to inform users about the selection.
+   Click Save.
+   When triggering the job, select **"Build with Parameters"** and choose the configured options.
+   Click Build.
+
+
+
+ Creating a Jenkins User
+- Manage Jenkins > Security > Disable "Keep me signed in"
+  - This ensures users must sign in every time they access Jenkins services.
+- Manage Jenkins > Security > "Allow users to sign in"
+  - Allows users to register and log in from the signup page.
+  - Useful for controlling user access.
