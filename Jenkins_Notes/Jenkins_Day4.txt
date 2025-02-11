@@ -1,0 +1,128 @@
+
+
+I]Job Scheduling in Jenkins
+
+     •Schedule Job to Print Every Minute of Every Hour on Feb 8th (Saturday):
+      Cron Expression:
+     
+      M H DOM Month DOW
+      * * 8     2    6
+
+II] Job Configuration for Periodic Build Trigger & Poll SCM Trigger
+     • Steps:
+     • Create new item
+     • Go to triggers
+     • Select 'Build periodically' or 'Poll SCM'
+     • Check the appropriate checkbox to open the scheduling comment box
+     • Schedule the job as per requirement
+     • Example: To schedule a job every minute on Feb 8th (Saturday), 
+
+       use-
+
+       M H DOM Month DOW
+       * *  8    2    6
+     • Click on 'Save' and verify if the job is running as expected.
+
+
+III] Build After Other Projects are Built
+
+  • Setting Up Dependent Builds
+  • Create multiple jobs
+  • In 'Triggers' option, select 'Build after other projects are built'
+  • Check the box and specify the projects to be watched
+  • Click 'Save'
+
+IV]  Example: Job Dependencies
+   • Jobs: Job1, Job2, Job3
+   • Job2 should be triggered after Job1
+   • Job3 should be triggered after Job2
+   • Once Job1 is completed, downstream jobs should trigger automatically.
+
+   Handling Build Failures
+   • For 'Job2', select 'Build after other projects are built'
+   • Select the 'sub-option' to trigger even 'if the upstream build fails'
+   • Click 'Save'
+   • Introduce an intentional mistake in 'Job1' to test failure handling.
+
+
+
+ API, BDD, and TDD
+
+• What is API? --> API (Application Programming Interface) is a set of rules and protocols that allow different 
+  software applications to communicate with each other.
+
+• What is TDD (Test-Driven Development)? --> TDD is a software development approach where tests are written before 
+  the actual code.
+
+• What is BDD (Behavior-Driven Development)? --> BDD extends TDD by focusing on the behavior of the system rather 
+  than just unit tests.
+
+
+ Triggering Builds Manually
+
+     --> Using URL to Trigger Builds
+    
+   • After configuring a project, if a user cannot manually trigger a build, a URL containing the 'token name' 
+     can be used to trigger the build remotely.
+
+
+
+ Pipeline Project Configuration
+
+1] Why Use Pipeline Projects?
+  • Secures the CI/CD pipeline code by storing it in repositories like GitHub, Bitbucket, GitLab.
+
+2] Steps to Create a Pipeline Project
+   
+   • Click 'New Item'
+   • Select 'Pipeline' and click 'OK'
+   • Go to 'Configuration' → 'Pipeline' (Define the pipeline script)
+   • Write the script directly or fetch it from SCM (GitHub, GitLab, etc.)
+   • In the 'Script' tab, use the dropdown to select a sample pipeline.
+
+    --> Sample "Hello World" Pipeline Script(groovy)
+
+pipeline {
+    agent any
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello, World!'
+            }
+        }
+    }
+}
+
+Click on 'Save' to store changes.
+
+Ensure the 'Stage View' plugin is installed to visualize the build stages.
+
+--> Rebuild vs Replay:
+    ------------------
+Rebuild: Triggers the job again without modifying anything.
+
+Replay: Allows modifications to the pipeline script before execution.
+
+Replay can also be used as a troubleshooting mechanism.
+
+   --> Using Pipeline Snippet Generator:
+    
+ • If you're unfamiliar with writing pipeline script code, use the Snippet Generator.
+ • The "Pipeline Syntax" option is visible when creating a pipeline project or job.
+ • The Snippet Generator helps in learning pipeline script syntax and generating predefined steps.
+
+  --> Example:
+
+ • Print a message (from sample steps in Snippet Generator).
+ • Configure the step and click Generate Pipeline Script.
+ • Copy-paste the generated snippet or modify it as needed.
+ • Pipeline Execution
+ 
+ • By default, pipeline execution follows a serial mode (one step at a time).
+ • A stage only starts after the previous one passes.
+
+   --> How to create a new item/job/project from existing jobs?
+ • click on 'new item'  --> give the job name
+			--> select the type of project
+			--> scroll down the bottom, where can find 'copy from' option
+			--> In that option, we can give the already existing job name which we want to get configurations from.
