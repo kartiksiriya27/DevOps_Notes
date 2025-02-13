@@ -1,0 +1,36 @@
+I] Tools Configuration in Jenkins
+
+• If at all we want to configure tools like Apache Maven, Docker, etc., we need to go to Manage Jenkins, then System Configuration, then Tools Configuration, their location, and automatic installer.
+
+• Example: To configure Apache Maven specific version (3.6.0)
+
+• To configure Apache Maven in Tools Tab, we should install the plugin Apache Maven, then only we can see Maven installation in tools.
+
+• Click on Add Maven, then you can go for specific requirements. To install automatically, we should check the box Install automatically option.
+
+II] How to Trigger Job Remotely
+
+• To configure this kind of requirement, we can make use of Trigger → Trigger builds remotely check box using authentication token.
+
+• Create Freestyle Job with name build remotely check box the trigger.
+
+• build remotely option and configure any build step with authentication token (aja-123). Save it and to check this job, use the below URL:
+
+• Syntax Remote URL
+
+• JENKINS_URL/job/buildremotely/build?token=TOKEN_NAME
+
+• Example: When JENKINS_URL is the location where Jenkins is accessible, build remotely is the job name, and TOKEN_NAME is the authentication token that we configured.
+
+• Example:
+localhost:9999/job/buildremotely/build?token=aja-123
+
+III] Another way of triggering the job remotely
+
+• In order to copy a job (example: job2), we can use the following command:
+
+curl -u admin:API-TOKEN -X post localhost:8999/job/job2/build
+ 
+• -u is the user (admin)
+• API-TOKEN is the token that needs to be generated with user admin
+• Post is the method to call the URL
