@@ -10,7 +10,7 @@ I] Tools Configuration in Jenkins
 
 II] How to Trigger Job Remotely
 
-• To configure this kind of requirement, we can make use of Trigger → Trigger builds remotely check box using authentication token.
+• To configure this kind of requirement, we can make use of Trigger → Trigger builds remote using authentication token.
 
 • Create Freestyle Job with name build remotely check box the trigger.
 
@@ -18,7 +18,7 @@ II] How to Trigger Job Remotely
 
 • Syntax Remote URL
 
-• JENKINS_URL/job/buildremotely/build?token=TOKEN_NAME
+• URL  -->  JENKINS_URL/job/buildremotely/build?token=TOKEN_NAME
 
 • Example: When JENKINS_URL is the location where Jenkins is accessible, build remotely is the job name, and TOKEN_NAME is the authentication token that we configured.
 
