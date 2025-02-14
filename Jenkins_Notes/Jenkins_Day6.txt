@@ -29,7 +29,7 @@ III] Another way of triggering the job remotely
 
 • In order to copy a job (example: job2), we can use the following command:
 
-curl -u admin:API-TOKEN -X post localhost:8999/job/job2/build
+curl -u admin:API-TOKEN -X POST localhost:8999/job/job2/build
  
 • -u is the user (admin)
 • API-TOKEN is the token that needs to be generated with user admin
