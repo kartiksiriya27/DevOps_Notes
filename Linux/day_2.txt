@@ -1,0 +1,77 @@
+1] How is Load Average Calculated in Linux?
+
+• Here, 1.23, 0.95, 0.87 are the load averages for the last:
+Load average represents the average number of processes waiting for CPU or I/O (disk, network) over a specific period. It is displayed as three numbers in Linux
+
+1 minute
+5 minutes
+15 minutes
+
+cat /proc/loadavg syntax 
+
+2] What is Swap Space in Linux?
+
+• Swap space in Linux is a dedicated area on a disk (partition or file) used as virtual memory when the RAM is full. It acts as an overflow area, temporarily storing data that cannot fit into RAM, allowing the system to continue running smoothly.
+cat /proc/swaps syntax
+
+How to Change the Priority of a Process in Linux? 
+In Linux, process priority determines how much CPU time a process gets. You can change the priority using the nice and renice commands.
+
+
+YUM & APT Abbreviations
+ YUM → Yellowdog Updater, Modified
+
+
+ APT → Advanced Package Tool
+
+3]what is swap space in Linux
+
+• Swap space in Linux is a reserved area on a disk used as virtual memory when the system's physical RAM is full. When RAM is exhausted, the kernel moves inactive memory pages to swap, freeing up RAM for active processes. While swap helps prevent crashes due to memory shortages, excessive swapping (swap thrashing) can slow down the system due to slower disk access compared to RAM.
+
+4]how to change the priority of task in processor
+
+• You can change a process's priority in Linux using nice (before starting) or renice (for running processes). For example, to start a process with lower priority:
+nice -n 10 myscript.sh
+To change the priority of a running process with PID 1234:
+renice -n 5 -p 1234
+Lower values mean higher priority, and only root can set negative nice values.
+
+5]yum and apt abbreviations?
+
+• YUM: Yellowdog Updater, Modified – A package manager for RPM-based distributions like RHEL and CentOS.
+• APT: Advanced Package Tool – A package manager for Debian-based distributions like Ubuntu and Debian.
+
+7]scp vs sftp vs ftp
+
+• Here’s a quick comparison of SCP, SFTP, and FTP:
+
+SCP (Secure Copy Protocol)
+
+• Uses SSH for secure file transfer.
+Only supports file transfer (no listing or managing remote files).
+
+• SFTP (SSH File Transfer Protocol)
+
+Uses SSH for secure file transfer and remote file management.
+Supports file listing, deletion, and directory navigation.
+
+FTP (File Transfer Protocol)
+
+An insecure protocol that transfers files over TCP (unencrypted).
+Uses separate channels for commands (port 21) and data transfer.
+
+Key Differences:
+
+SCP & SFTP are secure (use SSH), while FTP is insecure.
+SFTP supports file management, SCP does not.
+FTP requires extra configurations for encryption (FTPS).
+
+8]what is umask
+
+• umask (User File Creation Mask) controls the default permissions for new files and directories by subtracting values from the system defaults (666 for files, 777 for directories). For example, a umask of 022 results in 644 (rw-r--r--) for files and 755 (rwxr-xr-x) for directories.
+
+9]when we create a new user user should notify that for every 30 days they should change the password
+
+• change -M 30 -W 7 username
+-M 30 → Sets password expiry to 30 days.
+-W 7 → Warns the user 7 days before expiry.

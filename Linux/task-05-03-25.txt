@@ -1,0 +1,64 @@
+#!/bin/bash
+
+# Update system
+echo "Updating system..."
+sudo yum update -y
+
+# Install Amazon Corretto 21 JDK
+echo "Installing Amazon Corretto 21 JDK..."
+sudo yum install java-21-amazon-corretto-devel.x86_64 -y
+
+# Install Maven for Amazon Corretto 21
+echo "Installing Maven for Amazon Corretto 21..."
+sudo yum install maven-amazon-corretto21.noarch -y
+
+# Install unzip if not present (to extract Tomcat)
+echo "Installing unzip..."
+sudo yum install unzip -y
+
+# Install Jenkins repository
+echo "Adding Jenkins repository..."
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+
+# Install Jenkins
+echo "Installing Jenkins..."
+sudo yum install jenkins -y
+
+# Reload systemd manager configuration
+echo "Reloading systemd daemon..."
+sudo systemctl daemon-reload
+
+# Start Jenkins service
+echo "Starting Jenkins..."
+sudo systemctl start jenkins
+
+# Install Tomcat
+echo "Downloading and Installing Tomcat..."
+cd /opt
+sudo wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.100/bin/apache-tomcat-9.0.100.zip
+sudo unzip apache-tomcat-9.0.100.zip
+sudo chmod 755 /opt/apache-tomcat-9.0.100/bin/*.sh
+
+# Cleanup downloaded Tomcat zip file
+echo "Cleaning up Tomcat zip file..."
+sudo rm apache-tomcat-9.0.100.zip
+
+# Changing default port number (from 8080 to 8090)
+echo "Changing Tomcat default port to 8090..."
+sed -i 's/8080/8090/g' /opt/apache-tomcat-9.0.100/conf/server.xml
+
+# Starting Tomcat
+echo "Starting Tomcat..."
+sudo /opt/apache-tomcat-9.0.100/bin/startup.sh
+
+# Check if Tomcat started successfully
+if ps aux | grep -v grep | grep tomcat > /dev/null
+then
+    echo "Tomcat started successfully!"
+else
+    echo "Tomcat failed to start!"
+    exit 1
+fi
+
+echo "Installation completed successfully!"

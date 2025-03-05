@@ -1,0 +1,65 @@
+What will happen when we turn on the computer ?
+
+Power on → Electricity flows.
+BIOS/UEFI starts → Runs POST checks.
+Bootloader loads → Finds OS.
+Operating system loads → Initializes drivers & services.
+User logs in → System is ready to use.
+
+
+Abbreviation of GNU ?
+
+GNU'S NOT UNIX
+
+Linux folder Structure 
+
+In Linux, the filesystem follows a hierarchical structure where all directories and files originate from the root directory (/). Below is an overview of the key directories:
+
+
+Summary of Key Directories
+Directory	Purpose
+/	Root directory (base of the filesystem)
+/bin	Essential command binaries
+/sbin	System administration binaries
+/etc	System-wide configuration files
+/home	User home directories
+/root	Home directory for the root user
+/var	Log files and system data
+/tmp	Temporary files
+/usr	User binaries, libraries, documentation
+/lib	Shared system libraries
+/dev	Device files (disks, printers, etc.)
+/mnt & /media	Mount points for external storage
+/opt	Third-party applications
+/proc & /sys	Virtual filesystems for system and process info
+/boot	Bootloader and kernel files
+/srv	Service-related files
+
+ ext (Extended File System)
+First introduced in 1992.
+The first filesystem designed specifically for Linux.
+Had many limitations, including poor performance and lack of key features like journaling.
+
+2. ext2 (Second Extended File System)
+Introduced in 1993.
+Improved performance over ext.
+Does NOT support journaling, meaning after a crash, the system needs to perform a full filesystem check.
+Used in USB drives and SD cards due to its simplicity and low overhead.
+
+3. ext3 (Third Extended File System)
+Introduced in 2001.
+Added journaling, reducing the risk of data loss during crashes.
+Backward compatible with ext2 (can be mounted as ext2 if journaling is disabled).
+Not as fast as other modern file systems.
+
+4. ext4 (Fourth Extended File System)
+Introduced in 2008.
+Supports larger file sizes (up to 16 TB) and larger volumes (up to 1 EB).
+More efficient storage allocation with delayed allocation and multi-block allocation.
+Backward compatible with ext3 and ext2.
+Faster and more reliable than ext3, making it the default Linux filesystem in most distributions.
+
+Which One Should You Use?
+ext2: Best for USB drives and SD cards (to reduce write operations).
+ext3: Only if you're working with an old Linux system.
+ext4: Recommended for modern Linux systems due to performance and reliability

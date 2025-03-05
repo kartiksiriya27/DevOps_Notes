@@ -1,0 +1,11 @@
+1] Cache 
+• A storage space for files like images and videos
+• Helps pages load faster by saving parts of pages
+• Reduces stress on the server
+• Stored in high-speed hardware components like RAM
+
+2] Cookies 
+• Small text files that store information about users
+• Helps websites identify users and track their browsing activity
+• Can store information like login credentials, preferences, and shopping cart items
+• Can be used to remember users across different sites
